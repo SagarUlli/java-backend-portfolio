@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sagar | Java Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset & base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f5f6fa;
+        color: #1e1e2f;
+        scroll-behavior: smooth;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+        transition: 0.3s;
+      }
+      section {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 30px 20px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+      }
+      section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #4f46e5;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        margin-bottom: 12px;
+        line-height: 1.6;
+      }
+
+      /* Header */
+      header {
+        background: linear-gradient(135deg, #4f46e5, #6d28d9);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+      header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+      header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+        z-index: 1000;
+        border-bottom: 2px solid #f0f0f0;
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+        padding: 15px 0;
+        flex-wrap: wrap;
+      }
+      nav a {
+        font-weight: 500;
+        color: #1e1e2f;
+        padding: 6px 12px;
+        border-radius: 8px;
+      }
+      nav a:hover {
+        background: #4f46e5;
+        color: #fff;
+      }
+
+      /* Buttons / links */
+      a.project-link {
+        background: #4f46e5;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 8px;
+        display: inline-block;
+        margin-top: 5px;
+        font-weight: 500;
+      }
+      a.project-link:hover {
+        background: #6d28d9;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 25px;
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 40px;
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 2rem;
+        }
+        nav ul {
+          flex-direction: column;
+          gap: 15px;
+        }
+        section {
+          margin: 30px 15px;
+          padding: 25px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#internship">Internship</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Sagar</h1>
+      <p>Entry-Level Java Developer | Spring Boot & Microservices</p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hi! I’m Sagar, a backend developer focused on Java, Spring Boot, and
+        microservices. I enjoy building clean, efficient applications and
+        continuously improving my skills through hands-on projects and
+        internships.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Programming Languages:</strong> Java, SQL</li>
+        <li>
+          <strong>Frameworks & Libraries:</strong> Spring Boot, Spring MVC,
+          Hibernate, Spring Data JPA, Aspect-Oriented Programming (AOP)
+        </li>
+        <li>
+          <strong>Architectures & APIs:</strong> RESTful APIs, MVC Architecture,
+          Microservices Architecture
+        </li>
+        <li><strong>Databases:</strong> MySQL, JDBC</li>
+        <li>
+          <strong>Tools & Platforms:</strong> Git, GitHub, Bitbucket, Postman,
+          Swagger
+        </li>
+      </ul>
+    </section>
+
+    <section id="internship">
+      <h2>Internship</h2>
+      <p>
+        <strong>Backend Developer Intern — HulkHire Tech</strong><br />
+        Aug 2025 – Oct 2025 | Remote
+      </p>
+      <ul>
+        <li>Built Stripe-based payment processing system using Spring Boot.</li>
+        <li>
+          Designed modular microservices for validation, processing, and payment
+          workflow.
+        </li>
+        <li>Implemented secure webhooks and asynchronous event handling.</li>
+        <li>
+          Developed REST APIs tested with Postman and documented via Swagger.
+        </li>
+        <li>
+          Used MySQL for transaction persistence and service coordination.
+        </li>
+      </ul>
+      <p>
+        <strong>Tech Stack:</strong> Java · Spring Boot · MySQL · Stripe · REST
+        APIs
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>JSPGram – Social Media Backend</strong><br />
+          Designed RESTful APIs, email OTP authentication, post CRUD,
+          followers/following system, and premium memberships via Razorpay.<br />
+          <a
+            class="project-link"
+            href="https://github.com/SagarUlli/JSPGram"
+            target="_blank"
+            >View Project</a
+          >
+        </li>
+      </ul>
+      <p>
+        <strong>Tech Stack:</strong> Java · Spring Boot · Spring Data JPA · REST
+        APIs · MySQL · Razorpay · Cloudinary
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: sagarulli5@example.com</li>
+        <li>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/u-sagar/" target="_blank"
+            >SagarUlli</a
+          >
+        </li>
+        <li>
+          GitHub:
+          <a href="https://github.com/SagarUlli" target="_blank">SagarUlli</a>
+        </li>
+      </ul>
+    </section>
+
+    <footer>&copy; 2026 Sagar. Minimal Gen Z Portfolio.</footer>
+  </body>
+</html>
