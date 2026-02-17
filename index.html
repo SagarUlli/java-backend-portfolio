@@ -14,17 +14,24 @@
         padding: 0;
         box-sizing: border-box;
       }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         font-family: "Poppins", sans-serif;
         background: #f5f6fa;
         color: #1e1e2f;
-        scroll-behavior: smooth;
         line-height: 1.6;
+        padding-top: 70px; /* ✅ Prevent navbar overlap */
       }
+
       a {
         text-decoration: none;
         transition: 0.3s;
       }
+
       section {
         max-width: 900px;
         margin: 50px auto;
@@ -33,27 +40,34 @@
         border-radius: 16px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         transition: 0.3s;
+        scroll-margin-top: 90px; /* ✅ Fix anchor scroll overlap */
       }
+
       section:hover {
         transform: translateY(-5px);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
       }
+
       h1,
       h2 {
         line-height: 1.2;
       }
+
       h2 {
         color: #4f46e5;
         margin-bottom: 20px;
         font-weight: 600;
         font-size: 1.8rem;
       }
+
       ul {
         list-style: none;
       }
+
       li {
         margin-bottom: 12px;
       }
+
       header {
         background: linear-gradient(135deg, #4f46e5, #6d28d9);
         color: white;
@@ -62,24 +76,31 @@
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
       }
+
       header h1 {
         font-size: clamp(2rem, 6vw, 3rem);
         margin-bottom: 10px;
         text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
       }
+
       header p {
         font-size: clamp(1rem, 2.5vw, 1.2rem);
         opacity: 0.9;
       }
+
+      /* ================= NAVBAR ================= */
+
       nav {
         position: fixed;
         top: 0;
+        left: 0;
         width: 100%;
         background: white;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
         z-index: 1000;
         border-bottom: 2px solid #f0f0f0;
       }
+
       nav ul {
         display: flex;
         justify-content: center;
@@ -87,16 +108,21 @@
         padding: 15px 10px;
         flex-wrap: wrap;
       }
+
       nav a {
         font-weight: 500;
         color: #1e1e2f;
         padding: 8px 16px;
         border-radius: 8px;
       }
+
       nav a:hover {
         background: #4f46e5;
         color: #fff;
       }
+
+      /* ================= LINKS ================= */
+
       a.project-link {
         background: #4f46e5;
         color: white;
@@ -105,11 +131,12 @@
         display: inline-block;
         margin-top: 5px;
         font-weight: 500;
-        transition: 0.3s;
       }
+
       a.project-link:hover {
         background: #6d28d9;
       }
+
       a.contact-link {
         color: #1e1e2f;
         padding: 6px 12px;
@@ -117,12 +144,13 @@
         background: #f0f0f0;
         display: inline-block;
         margin-top: 4px;
-        transition: 0.3s;
       }
+
       a.contact-link:hover {
         background: #4f46e5;
         color: white;
       }
+
       footer {
         text-align: center;
         padding: 25px 15px;
@@ -130,40 +158,46 @@
         color: #555;
         margin-top: 40px;
       }
+
+      /* ================= RESPONSIVE ================= */
+
       @media (max-width: 900px) {
         section {
           margin: 40px 20px;
           padding: 25px 20px;
         }
       }
+
       @media (max-width: 600px) {
-        header h1 {
-          font-size: 2rem;
+        body {
+          padding-top: 120px; /* ✅ Extra space when nav wraps */
         }
-        header p {
-          font-size: 1rem;
-        }
+
         nav ul {
           flex-direction: column;
           gap: 12px;
         }
+
+        header {
+          padding: 70px 15px;
+        }
+
         section {
           margin: 30px 15px;
           padding: 20px 15px;
         }
+
         h2 {
           font-size: 1.5rem;
         }
-        a.project-link,
-        a.contact-link {
-          padding: 6px 12px;
-        }
       }
+
       @media (max-width: 400px) {
         header {
           padding: 60px 15px;
           border-radius: 0 0 40px 40px;
         }
+
         nav a {
           padding: 6px 12px;
           font-size: 0.9rem;
@@ -171,6 +205,7 @@
       }
     </style>
   </head>
+
   <body>
     <nav>
       <ul>
@@ -186,7 +221,6 @@
       <h1>Sagar</h1>
       <p>Entry-Level Java Developer | Spring Boot & Microservices</p>
     </header>
-
     <section id="about">
       <h2>About Me</h2>
       <p>
@@ -196,7 +230,6 @@
         internships.
       </p>
     </section>
-
     <section id="skills">
       <h2>Technical Skills</h2>
       <ul>
@@ -216,7 +249,6 @@
         </li>
       </ul>
     </section>
-
     <section id="internship">
       <h2>Internship</h2>
       <p>
@@ -242,7 +274,6 @@
         APIs
       </p>
     </section>
-
     <section id="projects">
       <h2>Projects</h2>
       <ul>
@@ -263,13 +294,12 @@
         APIs · MySQL · Razorpay · Cloudinary
       </p>
     </section>
-
     <section id="contact">
       <h2>Contact</h2>
       <ul>
         <li>
           Email:
-          <a class="contact-link" href="mailto:sagarulli5@example.com"
+          <a class="contact-link" href="mailto:sagarulli5@gmail.com"
             >sagarulli5@gmail.com</a
           >
         </li>
@@ -293,7 +323,7 @@
         </li>
       </ul>
     </section>
-
     <footer>&copy; 2026 Sagar.</footer>
+    <!-- Rest of your sections remain unchanged -->
   </body>
 </html>
