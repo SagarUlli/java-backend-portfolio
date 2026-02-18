@@ -3,20 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sagar | Java Developer</title>
+    <title>Sagar Ulli | Java Developer</title>
+
+    <meta
+      name="description"
+      content="Sagar Ulli - Entry-Level Java Backend Developer specializing in Spring Boot, REST APIs, and Microservices."
+    />
+
+    <meta property="og:title" content="Sagar Ulli | Java Developer" />
+    <meta
+      property="og:description"
+      content="Java Backend Developer specializing in Spring Boot & Microservices."
+    />
+    <meta property="og:type" content="website" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
     <style>
       :root {
         --navbar-height: 70px;
-
-        /* Professional Color Palette */
-        --primary: #1f2937; /* Deep navy-gray */
-        --secondary: #374151; /* Soft dark gray */
-        --accent: #2563eb; /* Professional blue */
-        --light-bg: #f8fafc; /* Subtle background */
+        --primary: #1f2937;
+        --secondary: #374151;
+        --accent: #2563eb;
+        --light-bg: #f8fafc;
         --white: #ffffff;
         --border: #e5e7eb;
       }
@@ -44,7 +56,6 @@
         transition: 0.25s ease;
       }
 
-      /* ================= NAVBAR ================= */
       nav {
         position: sticky;
         top: 0;
@@ -66,12 +77,11 @@
       nav .logo {
         font-weight: 600;
         font-size: 1.1rem;
-        letter-spacing: 0.5px;
       }
 
       nav ul {
         display: flex;
-        gap: 30px;
+        gap: 25px;
         list-style: none;
       }
 
@@ -92,15 +102,10 @@
         transition: 0.3s ease;
       }
 
-      nav ul li a:hover {
-        color: var(--primary);
-      }
-
       nav ul li a:hover::after {
         width: 100%;
       }
 
-      /* ================= HEADER ================= */
       header {
         padding-top: calc(var(--navbar-height) + 40px);
         padding-bottom: 90px;
@@ -111,16 +116,15 @@
 
       header h1 {
         font-size: clamp(2.2rem, 5vw, 3rem);
-        font-weight: 600;
         margin-bottom: 12px;
       }
 
       header p {
         font-size: 1.1rem;
         color: var(--secondary);
+        margin-bottom: 20px;
       }
 
-      /* ================= SECTIONS ================= */
       section {
         max-width: 850px;
         margin: 60px auto;
@@ -129,18 +133,11 @@
         border-radius: 10px;
         border: 1px solid var(--border);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
-        transition: 0.3s ease;
-      }
-
-      section:hover {
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
       }
 
       h2 {
         font-size: 1.6rem;
         margin-bottom: 20px;
-        font-weight: 600;
-        color: var(--primary);
         border-left: 4px solid var(--accent);
         padding-left: 12px;
       }
@@ -154,7 +151,6 @@
         color: var(--secondary);
       }
 
-      /* ================= BUTTON LINKS ================= */
       a.project-link {
         display: inline-block;
         margin-top: 10px;
@@ -162,7 +158,6 @@
         border-radius: 6px;
         background: var(--accent);
         color: var(--white);
-        font-weight: 500;
         font-size: 0.9rem;
       }
 
@@ -185,7 +180,6 @@
         color: var(--white);
       }
 
-      /* ================= FOOTER ================= */
       footer {
         text-align: center;
         padding: 30px 15px;
@@ -196,73 +190,24 @@
         background: var(--white);
       }
 
-      /* ================= HAMBURGER ================= */
-      .hamburger {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-      }
-
-      .hamburger div {
-        width: 24px;
-        height: 2px;
-        background: var(--primary);
-        transition: 0.3s;
-      }
-
-      /* ================= MOBILE ================= */
       @media (max-width: 768px) {
-        .hamburger {
-          display: flex;
-        }
-
         nav ul {
-          position: absolute;
-          top: var(--navbar-height);
-          left: 0;
-          width: 100%;
-          background: var(--white);
           flex-direction: column;
-          align-items: center;
           gap: 15px;
-          padding: 20px 0;
-          border-top: 1px solid var(--border);
-          max-height: 0;
-          overflow: hidden;
-          opacity: 0;
-          transition: 0.3s ease;
-        }
-
-        .nav-active {
-          max-height: 400px;
-          opacity: 1;
-        }
-
-        .nav-hidden {
-          max-height: 0;
-          opacity: 0;
-        }
-
-        :root {
-          --navbar-height: 60px;
         }
       }
     </style>
   </head>
+
   <body>
     <nav>
       <div class="nav-container">
-        <div class="logo">Sagar</div>
-        <div class="hamburger" id="hamburger">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <ul id="nav-links" class="nav-hidden">
-          <li><a href="#about">About</a></li>
+        <div class="logo">Sagar Ulli</div>
+        <ul>
+          <li><a href="#about">Summary</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#internship">Internship</a></li>
+          <li><a href="#certificates">Certificate</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -270,17 +215,26 @@
     </nav>
 
     <header>
-      <h1>Sagar</h1>
+      <h1>Sagar Ulli</h1>
       <p>Entry-Level Java Developer | Spring Boot & Microservices</p>
+
+      <a
+        class="project-link"
+        href="https://raw.githubusercontent.com/SagarUlli/Resume/main/Sagar-Ulli-Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Download Resume
+      </a>
     </header>
 
     <section id="about">
-      <h2>About Me</h2>
+      <h2>Professional Summary</h2>
       <p>
-        Hi! I’m Sagar, a backend developer focused on Java, Spring Boot, and
-        microservices. I enjoy building clean, efficient applications and
-        continuously improving my skills through hands-on projects and
-        internships.
+        Entry-Level Java Backend Developer with hands-on experience building
+        scalable REST APIs and microservice-based applications using Spring
+        Boot. Strong foundation in database design, secure payment integration,
+        and clean layered architecture.
       </p>
     </section>
 
@@ -289,18 +243,12 @@
       <ul>
         <li><strong>Programming Languages:</strong> Java, SQL</li>
         <li>
-          <strong>Frameworks & Libraries:</strong> Spring Boot, Spring MVC,
-          Hibernate, Spring Data JPA, AOP
+          <strong>Frameworks:</strong> Spring Boot, Spring MVC, Hibernate,
+          Spring Data JPA
         </li>
-        <li>
-          <strong>Architectures & APIs:</strong> RESTful APIs, MVC Architecture,
-          Microservices
-        </li>
+        <li><strong>Architectures:</strong> REST APIs, Microservices</li>
         <li><strong>Databases:</strong> MySQL, JDBC</li>
-        <li>
-          <strong>Tools & Platforms:</strong> Git, GitHub, Bitbucket, Postman,
-          Swagger
-        </li>
+        <li><strong>Tools:</strong> Git, GitHub, Postman, Swagger</li>
       </ul>
     </section>
 
@@ -313,42 +261,43 @@
       <ul>
         <li>Built Stripe-based payment processing system using Spring Boot.</li>
         <li>
-          Designed modular microservices for validation, processing, and payment
-          workflow.
+          Designed modular microservices for validation and workflow handling.
         </li>
         <li>Implemented secure webhooks and asynchronous event handling.</li>
         <li>
           Developed REST APIs tested with Postman and documented via Swagger.
         </li>
-        <li>
-          Used MySQL for transaction persistence and service coordination.
-        </li>
+        <li>Used MySQL for transaction persistence.</li>
       </ul>
-      <p>
-        <strong>Tech Stack:</strong> Java · Spring Boot · MySQL · Stripe · REST
-        APIs
-      </p>
+    </section>
+
+    <section id="certificates">
+      <h2>Certification</h2>
+      <a
+        class="project-link"
+        href="https://github.com/SagarUlli/Resume/blob/main/Trainee%20-%20B12334.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Certificate
+      </a>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>JSPGram – Social Media Backend</strong><br />
-          Designed RESTful APIs, email OTP authentication, post CRUD,
-          followers/following system, and premium memberships via Razorpay.<br />
-          <a
-            class="project-link"
-            href="https://github.com/SagarUlli/spring-boot-jsp-gram"
-            target="_blank"
-            >View Project</a
-          >
-        </li>
-      </ul>
+      <p><strong>JSPGram – Social Media Backend</strong></p>
       <p>
-        <strong>Tech Stack:</strong> Java · Spring Boot · Spring Data JPA · REST
-        APIs · MySQL · Razorpay · Cloudinary
+        Designed RESTful APIs with email OTP authentication, CRUD operations,
+        followers system, and premium memberships via Razorpay.
       </p>
+      <a
+        class="project-link"
+        href="https://github.com/SagarUlli/spring-boot-jsp-gram"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Project
+      </a>
     </section>
 
     <section id="contact">
@@ -366,6 +315,7 @@
             class="contact-link"
             href="https://www.linkedin.com/in/u-sagar/"
             target="_blank"
+            rel="noopener noreferrer"
             >🔗</a
           >
         </li>
@@ -375,25 +325,23 @@
             class="contact-link"
             href="https://github.com/SagarUlli"
             target="_blank"
+            rel="noopener noreferrer"
             >🐙</a
+          >
+        </li>
+        <li>
+          LeetCode:
+          <a
+            class="contact-link"
+            href="https://leetcode.com/u/ulli_7/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >💻</a
           >
         </li>
       </ul>
     </section>
 
-    <footer>&copy; 2026 Sagar.</footer>
-
-    <script>
-      const hamburger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("nav-links");
-
-      hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("nav-active");
-        navLinks.classList.toggle("nav-hidden");
-
-        // animate hamburger lines
-        hamburger.classList.toggle("toggle");
-      });
-    </script>
+    <footer>&copy; 2026 Sagar Ulli · Built with HTML & CSS</footer>
   </body>
 </html>
