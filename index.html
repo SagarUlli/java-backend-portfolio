@@ -3,31 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sagar Ulli | Java Developer</title>
+
+    <title>Sagar Ulli | Java Backend Developer</title>
 
     <meta
       name="description"
-      content="Sagar Ulli - Entry-Level Java Backend Developer specializing in Spring Boot, REST APIs, and Microservices."
+      content="Sagar Ulli - Java Backend Developer specializing in Spring Boot, REST APIs, and Microservices."
     />
 
-    <meta property="og:title" content="Sagar Ulli | Java Developer" />
+    <meta
+      name="keywords"
+      content="Java Developer, Spring Boot Developer, Backend Developer, REST API Developer, Microservices, Hibernate, MySQL"
+    />
+
+    <meta property="og:title" content="Sagar Ulli | Java Backend Developer" />
+
     <meta
       property="og:description"
-      content="Java Backend Developer specializing in Spring Boot & Microservices."
+      content="Java Backend Developer specializing in Spring Boot, REST APIs & Microservices."
     />
+
     <meta property="og:type" content="website" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- OPTIONAL FAVICON -->
+    <!-- <link rel="icon" href="./favicon.ico" /> -->
 
     <style>
       :root {
         --navbar-height: 70px;
-        --primary: #1f2937;
-        --secondary: #374151;
+        --primary: #111827;
+        --secondary: #4b5563;
         --accent: #2563eb;
+        --accent-dark: #1d4ed8;
         --light-bg: #f8fafc;
         --white: #ffffff;
         --border: #e5e7eb;
@@ -56,48 +68,57 @@
         transition: 0.25s ease;
       }
 
+      img {
+        max-width: 100%;
+      }
+
+      /* NAVBAR */
+
       nav {
         position: sticky;
         top: 0;
         width: 100%;
-        background: var(--white);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
         border-bottom: 1px solid var(--border);
         z-index: 1000;
       }
 
-      nav .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+      .nav-container {
         max-width: 1100px;
         margin: 0 auto;
         padding: 16px 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
-      nav .logo {
-        font-weight: 600;
-        font-size: 1.1rem;
+      .logo {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--primary);
       }
 
       nav ul {
         display: flex;
-        gap: 25px;
+        gap: 24px;
         list-style: none;
       }
 
       nav ul li a {
-        font-weight: 500;
         color: var(--secondary);
+        font-weight: 500;
         position: relative;
       }
 
       nav ul li a::after {
         content: "";
         position: absolute;
-        width: 0%;
-        height: 2px;
         left: 0;
         bottom: -4px;
+        width: 0%;
+        height: 2px;
         background: var(--accent);
         transition: 0.3s ease;
       }
@@ -106,40 +127,108 @@
         width: 100%;
       }
 
+      /* HERO */
+
       header {
-        padding-top: calc(var(--navbar-height) + 40px);
-        padding-bottom: 90px;
         background: var(--white);
-        text-align: center;
         border-bottom: 1px solid var(--border);
+
+        padding-top: calc(var(--navbar-height) + 50px);
+        padding-bottom: 90px;
+
+        text-align: center;
+      }
+
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--accent);
+        margin-bottom: 25px;
       }
 
       header h1 {
-        font-size: clamp(2.2rem, 5vw, 3rem);
+        font-size: clamp(2.4rem, 5vw, 3.5rem);
         margin-bottom: 12px;
       }
 
-      header p {
+      .hero-subtitle {
         font-size: 1.1rem;
         color: var(--secondary);
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
 
+      .hero-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      /* BUTTONS */
+
+      .primary-btn,
+      .secondary-btn {
+        padding: 12px 22px;
+        border-radius: 8px;
+        font-weight: 500;
+        display: inline-block;
+      }
+
+      .primary-btn {
+        background: var(--accent);
+        color: white;
+      }
+
+      .primary-btn:hover {
+        background: var(--accent-dark);
+        transform: translateY(-2px);
+      }
+
+      .secondary-btn {
+        background: #eef2ff;
+        color: var(--accent);
+      }
+
+      .secondary-btn:hover {
+        background: var(--accent);
+        color: white;
+      }
+
+      /* SECTIONS */
+
       section {
-        max-width: 850px;
+        max-width: 900px;
         margin: 60px auto;
-        padding: 40px 30px;
+        padding: 40px 32px;
+
         background: var(--white);
-        border-radius: 10px;
         border: 1px solid var(--border);
+        border-radius: 14px;
+
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      section:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
       }
 
       h2 {
         font-size: 1.6rem;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
+
         border-left: 4px solid var(--accent);
         padding-left: 12px;
+      }
+
+      p {
+        color: var(--secondary);
       }
 
       ul {
@@ -147,132 +236,249 @@
       }
 
       li {
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         color: var(--secondary);
       }
 
-      a.project-link {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 8px 18px;
-        border-radius: 6px;
-        background: var(--accent);
-        color: var(--white);
+      /* SKILLS */
+
+      .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .skills-grid span {
+        background: #eff6ff;
+        color: var(--accent);
+
+        padding: 10px 16px;
+        border-radius: 30px;
+
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      /* PROJECTS */
+
+      .project-card {
+        margin-top: 15px;
+      }
+
+      .project-card h3 {
+        margin-bottom: 10px;
+      }
+
+      .project-links {
+        margin-top: 20px;
+
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .demo-note {
+        margin-top: 14px;
         font-size: 0.9rem;
+        color: #6b7280;
       }
 
-      a.project-link:hover {
-        background: #1d4ed8;
+      /* CONTACT */
+
+      .contact-list li {
+        margin-bottom: 16px;
       }
 
-      a.contact-link {
-        display: inline-block;
-        margin-top: 5px;
-        padding: 6px 12px;
-        border-radius: 6px;
-        background: #f3f4f6;
-        color: var(--primary);
-        font-size: 0.9rem;
+      .contact-link {
+        color: var(--accent);
+        font-weight: 500;
       }
 
-      a.contact-link:hover {
-        background: var(--accent);
-        color: var(--white);
+      .contact-link:hover {
+        color: var(--accent-dark);
       }
+
+      /* FOOTER */
 
       footer {
         text-align: center;
-        padding: 30px 15px;
-        font-size: 0.85rem;
-        color: var(--secondary);
-        border-top: 1px solid var(--border);
-        margin-top: 60px;
+        padding: 35px 20px;
+
         background: var(--white);
+        border-top: 1px solid var(--border);
+
+        color: var(--secondary);
+        font-size: 0.9rem;
+
+        margin-top: 60px;
       }
 
+      /* MOBILE */
+
       @media (max-width: 768px) {
-        nav ul {
+        .nav-container {
           flex-direction: column;
-          gap: 15px;
+          gap: 16px;
+        }
+
+        nav ul {
+          overflow-x: auto;
+          white-space: nowrap;
+          flex-wrap: nowrap;
+          width: 100%;
+          justify-content: flex-start;
+          padding-bottom: 5px;
+        }
+
+        section {
+          margin: 30px 15px;
+          padding: 30px 22px;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+          width: 220px;
+          text-align: center;
         }
       }
     </style>
   </head>
 
   <body>
+    <!-- NAVBAR -->
+
     <nav>
       <div class="nav-container">
         <div class="logo">Sagar Ulli</div>
+
         <ul>
           <li><a href="#about">Summary</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#internship">Internship</a></li>
           <li><a href="#certificates">Certificate</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#opportunities">Opportunities</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
 
-    <header>
-      <h1>Sagar Ulli</h1>
-      <p>Entry-Level Java Developer | Spring Boot & Microservices</p>
+    <!-- HERO -->
 
-      <!-- LOCAL RESUME PDF -->
-      <a class="project-link" href="./Sagar-Ulli-Resume.pdf" target="_blank">
-        Download Resume
-      </a>
+    <header>
+      <!-- ADD YOUR IMAGE -->
+      <img src="./profile.jpg" alt="Sagar Ulli" class="profile-pic" />
+
+      <h1>Sagar Ulli</h1>
+
+      <p class="hero-subtitle">
+        Java Backend Developer specializing in Spring Boot, REST APIs &
+        Microservices
+      </p>
+
+      <div class="hero-buttons">
+        <a class="primary-btn" href="./Sagar-Ulli-Resume.pdf" target="_blank">
+          Download Resume
+        </a>
+
+        <a
+          class="secondary-btn"
+          href="https://github.com/SagarUlli"
+          target="_blank"
+        >
+          GitHub
+        </a>
+
+        <a
+          class="secondary-btn"
+          href="https://www.linkedin.com/in/YOUR-LINKEDIN/"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+      </div>
     </header>
+
+    <!-- SUMMARY -->
 
     <section id="about">
       <h2>Professional Summary</h2>
+
       <p>
-        Entry-Level Java Backend Developer with hands-on experience building
-        scalable REST APIs and microservice-based applications using Spring
-        Boot. Strong foundation in database design, secure payment integration,
-        and clean layered architecture.
+        Java Backend Developer with hands-on experience building scalable REST
+        APIs and microservice-based applications using Spring Boot. Strong
+        foundation in backend architecture, secure payment integration,
+        authentication systems, and relational database design.
       </p>
     </section>
 
+    <!-- SKILLS -->
+
     <section id="skills">
       <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Programming Languages:</strong> Java, SQL</li>
-        <li>
-          <strong>Frameworks:</strong> Spring Boot, Spring MVC, Hibernate,
-          Spring Data JPA
-        </li>
-        <li><strong>Architectures:</strong> REST APIs, Microservices</li>
-        <li><strong>Databases:</strong> MySQL, JDBC</li>
-        <li><strong>Tools:</strong> Git, GitHub, Postman, Swagger</li>
-      </ul>
+
+      <div class="skills-grid">
+        <span>Java</span>
+        <span>SQL</span>
+        <span>Spring Boot</span>
+        <span>Spring MVC</span>
+        <span>Hibernate</span>
+        <span>Spring Data JPA</span>
+        <span>REST APIs</span>
+        <span>Microservices</span>
+        <span>MySQL</span>
+        <span>JDBC</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>Postman</span>
+        <span>Swagger</span>
+      </div>
     </section>
+
+    <!-- INTERNSHIP -->
 
     <section id="internship">
       <h2>Internship</h2>
+
       <p>
         <strong>Backend Developer Intern — HulkHire Tech</strong><br />
         Aug 2025 – Oct 2025 | Remote
       </p>
+
+      <br />
+
       <ul>
-        <li>Built Stripe-based payment processing system using Spring Boot.</li>
         <li>
-          Designed modular microservices for validation and workflow handling.
+          • Built Stripe-based payment processing system using Spring Boot.
         </li>
-        <li>Implemented secure webhooks and asynchronous event handling.</li>
+
         <li>
-          Developed REST APIs tested with Postman and documented via Swagger.
+          • Designed modular microservices for validation and workflow handling.
         </li>
-        <li>Used MySQL for transaction persistence.</li>
+
+        <li>• Implemented secure webhooks and asynchronous event handling.</li>
+
+        <li>
+          • Developed REST APIs tested using Postman and documented with
+          Swagger.
+        </li>
+
+        <li>• Used MySQL for transaction persistence and data management.</li>
       </ul>
     </section>
+
+    <!-- CERTIFICATES -->
 
     <section id="certificates">
       <h2>Certification</h2>
 
-      <!-- LOCAL CERTIFICATE PDF -->
       <a
-        class="project-link"
+        class="primary-btn"
         href="./Trainee - Sagar Ulli - B12334.pdf"
         target="_blank"
       >
@@ -280,34 +486,110 @@
       </a>
     </section>
 
+    <!-- PROJECTS -->
+
     <section id="projects">
       <h2>Projects</h2>
-      <p><strong>JSPGram – Social Media Backend</strong></p>
-      <p>
-        Designed RESTful APIs with email OTP authentication, CRUD operations,
-        followers system, and premium memberships via Razorpay.
-      </p>
-      <a
-        class="project-link"
-        href="https://github.com/SagarUlli/spring-boot-jsp-gram"
-        target="_blank"
-      >
-        View Project
-      </a>
+
+      <div class="project-card">
+        <h3>JSPGram – Social Media Backend</h3>
+
+        <p>
+          Developed a scalable social media backend application using Spring
+          Boot, Hibernate, MySQL, and Razorpay integration.
+        </p>
+
+        <br />
+
+        <p>
+          Features include email OTP authentication, CRUD operations, followers
+          system, premium memberships, secure REST APIs, and payment
+          integration.
+        </p>
+
+        <br />
+
+        <p>
+          Built using layered architecture principles with clean service and
+          repository separation.
+        </p>
+
+        <div class="project-links">
+          <a
+            class="primary-btn"
+            href="https://github.com/SagarUlli/spring-boot-jsp-gram"
+            target="_blank"
+          >
+            View Project
+          </a>
+
+          <a
+            class="secondary-btn"
+            href="https://spring-boot-jsp-gram.onrender.com"
+            target="_blank"
+          >
+            Live Demo
+          </a>
+        </div>
+
+        <p class="demo-note">
+          Demo may take a few seconds to load because the free hosting server
+          sleeps when inactive.
+        </p>
+      </div>
     </section>
+
+    <!-- OPPORTUNITIES -->
+
+    <section id="opportunities">
+      <h2>Opportunities</h2>
+
+      <p>
+        Seeking entry-level Java Backend Developer opportunities where I can
+        contribute to scalable backend systems using Spring Boot, REST APIs,
+        Microservices, and modern backend development practices.
+      </p>
+    </section>
+
+    <!-- CONTACT -->
 
     <section id="contact">
       <h2>Contact</h2>
-      <ul>
+
+      <ul class="contact-list">
         <li>
-          Email:
+          📧
           <a class="contact-link" href="mailto:sagarulli5@gmail.com">
             sagarulli5@gmail.com
+          </a>
+        </li>
+
+        <li>
+          💻
+          <a
+            class="contact-link"
+            href="https://github.com/SagarUlli"
+            target="_blank"
+          >
+            GitHub Profile
+          </a>
+        </li>
+
+        <li>
+          🔗
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/YOUR-LINKEDIN/"
+            target="_blank"
+          >
+            LinkedIn Profile
           </a>
         </li>
       </ul>
     </section>
 
-    <footer>&copy; 2026 Sagar Ulli · Built with HTML & CSS</footer>
+    <!-- FOOTER -->
+
+    <footer>© 2026 Sagar Ulli • Java Backend Developer</footer>
   </body>
 </html>
